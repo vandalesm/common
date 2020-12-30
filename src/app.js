@@ -4,11 +4,9 @@ import Button from './components/button'
 import ButtonGroup from './components/button-group'
 
 function App() {
-  const [count, setCount] = useState(0)
   return (
-    <Block column withMargin>
-      <div>You clicked {count} times</div>
-      <Button large onClick={() => setCount(count + 1)}>Click Me here a long text label</Button>
+    <Block column withMargin style={{maxWidth: '500px'}}>
+      <Button large onClick={() => console.log('clicked')}>Click Me here a long text label</Button>
       <br/>
       <ButtonGroup
         orientation='row'
