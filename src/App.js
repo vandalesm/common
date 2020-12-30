@@ -1,13 +1,10 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import Block from './components/block'
 import Button from './components/button'
 import ButtonGroup from './components/button-group'
 
 function App() {
   const [count, setCount] = useState(0)
-  useEffect(() => {
-    //document.title = `You clicked ${count} times`
-  })
   return (
     <Block column withMargin>
       <div>You clicked {count} times</div>
