@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import Block from '../block'
+import { colors, dim } from '../constants'
 
 ButtonGroup.propTypes = {
     data: PropTypes.arrayOf(PropTypes.shape({
@@ -52,29 +53,39 @@ export default ButtonGroup
 const Group = styled(Block)`
 flex: 1 1 auto;
 flex-direction: ${p => p.orientation};
-background-color: rgba(15, 15, 15, 0.9);
-border: 1px solid rgba(0, 0, 0, 0.1);
-color: rgba(255, 255, 255, 0.75);
-border-radius: 3px;
+background-color: ${colors.bgColorTransparent1};
+color: ${colors.textColorTransparent1};
+border-radius: ${dim.radius}px;
 ${p => p.orientation === 'column' ? `padding: 10px 0;` : `padding: 0 10px;`};
-${p => p.orientation === 'column' ? `height: ${p.length * 35}px` : `min-height: 35px`};
+${p => p.orientation === 'column' ? `height: ${p.length * dim.height}px` : `min-height: ${dim.height}px`};
 `
 const Button = styled(Block)`
 justify-content: center;
 align-items: center;
 width: 100%;
-height: 35px;
+height: ${dim.height}px;
 font-size: 1rem;
 font-family: monospace;
+position: relative;
 ${p => p.active && `
-  background-color: rgba(15, 15, 15, 1);
-  outline: 3.5px solid rgba(15, 15, 15, 1);
-  color: white;
+  background-color: ${colors.bgColorOpaque};
+  color: ${colors.textColorOpaque};
   font-size: 1.1rem;
   z-index: 1;
+  &:before {
+      content: '';
+      position: absolute;
+      top: -3px;
+      bottom: -3px;
+      left: -3px;
+      right: -3px;
+      border-radius: ${dim.radius}px;
+      border: 5px solid ${colors.bgColorOpaque};
+  }
 `}
 &:hover {
   cursor: pointer;
-  ${p => !p.active && 'background-color: rgba(255, 255, 255, 0.05)'};
+  color: ${colors.textColorOpaque};
+  ${p => !p.active && 'background-color: ' + colors.bgColorHighlight};
 }
 `
