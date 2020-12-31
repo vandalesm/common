@@ -7,6 +7,10 @@ exports.default = void 0;
 
 var _styledComponents = _interopRequireDefault(require("styled-components"));
 
+var _propTypes = _interopRequireDefault(require("prop-types"));
+
+var _constants = require("../constants");
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _templateObject() {
@@ -44,9 +48,35 @@ var Block = _styledComponents.default.div(_templateObject(), function (p) {
 }, function (p) {
   return p.withPadding && 'padding: 10px;';
 }, function (p) {
-  return p.withBorder && 'border: 1px solid rgba(15, 15, 15, 0.9);';
+  return p.withBorder && 'border: 1px solid ' + _constants.colors.bgColorTransparent1 + ';';
 });
 
+Block.propTypes = {
+  noGrow: _propTypes.default.any,
+  baseWidth: _propTypes.default.string,
+  withWrap: _propTypes.default.any,
+  withClip: _propTypes.default.any,
+  direction: _propTypes.default.oneOf(['column', 'row']),
+  justifyCenter: _propTypes.default.any,
+  justifyStart: _propTypes.default.any,
+  justifyEnd: _propTypes.default.any,
+  justifyAround: _propTypes.default.any,
+  justifyBetween: _propTypes.default.any,
+  alignItemsCenter: _propTypes.default.any,
+  alignItemsStart: _propTypes.default.any,
+  alignItemsEnd: _propTypes.default.any,
+  alignItemsStretch: _propTypes.default.any,
+  alignItemsBaseline: _propTypes.default.any,
+  alignSelfCenter: _propTypes.default.any,
+  alignSelfStart: _propTypes.default.any,
+  alignSelfEnd: _propTypes.default.any,
+  alignSelfStretch: _propTypes.default.any,
+  alignSelfBaseline: _propTypes.default.any,
+  withMargin: _propTypes.default.any,
+  withPadding: _propTypes.default.any,
+  withBorder: _propTypes.default.any
+};
+Block.defaultProps = {};
 var _default = Block;
 exports.default = _default;
 

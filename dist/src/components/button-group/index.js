@@ -15,6 +15,8 @@ var _styledComponents = _interopRequireDefault(require("styled-components"));
 
 var _block = _interopRequireDefault(require("../block"));
 
+var _constants = require("../constants");
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function _getRequireWildcardCache() { return cache; }; return cache; }
@@ -22,7 +24,7 @@ function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
 function _templateObject2() {
-  var data = _taggedTemplateLiteral(["\njustify-content: center;\nalign-items: center;\nwidth: 100%;\nheight: 35px;\nfont-size: 1rem;\nfont-family: monospace;\n", "\n&:hover {\n  cursor: pointer;\n  ", ";\n}\n"]);
+  var data = _taggedTemplateLiteral(["\njustify-content: center;\nalign-items: center;\nwidth: 100%;\nheight: ", "px;\nfont-size: 1rem;\nfont-family: monospace;\nposition: relative;\n", "\n&:hover {\n  cursor: pointer;\n  color: ", ";\n  ", ";\n}\n"]);
 
   _templateObject2 = function _templateObject2() {
     return data;
@@ -32,7 +34,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\nflex: 1 1 auto;\nflex-direction: ", ";\nbackground-color: rgba(15, 15, 15, 0.9);\nborder: 1px solid rgba(0, 0, 0, 0.1);\ncolor: rgba(255, 255, 255, 0.75);\nborder-radius: 3px;\n", ";\n", ";\n"]);
+  var data = _taggedTemplateLiteral(["\nflex: 1 1 auto;\nflex-direction: ", ";\nbackground-color: ", ";\ncolor: ", ";\nborder-radius: ", "px;\n", ";\n", ";\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -125,15 +127,15 @@ var _default = ButtonGroup;
 exports.default = _default;
 var Group = (0, _styledComponents.default)(_block.default)(_templateObject(), function (p) {
   return p.orientation;
-}, function (p) {
+}, _constants.colors.bgColorTransparent1, _constants.colors.textColorTransparent1, _constants.dim.radius, function (p) {
   return p.orientation === 'column' ? "padding: 10px 0;" : "padding: 0 10px;";
 }, function (p) {
-  return p.orientation === 'column' ? "height: ".concat(p.length * 35, "px") : "min-height: 35px";
+  return p.orientation === 'column' ? "height: ".concat(p.length * _constants.dim.height, "px") : "min-height: ".concat(_constants.dim.height, "px");
 });
-var Button = (0, _styledComponents.default)(_block.default)(_templateObject2(), function (p) {
-  return p.active && "\n  background-color: rgba(15, 15, 15, 1);\n  outline: 3.5px solid rgba(15, 15, 15, 1);\n  color: white;\n  font-size: 1.1rem;\n  z-index: 1;\n";
-}, function (p) {
-  return !p.active && 'background-color: rgba(255, 255, 255, 0.05)';
+var Button = (0, _styledComponents.default)(_block.default)(_templateObject2(), _constants.dim.height, function (p) {
+  return p.active && "\n  background-color: ".concat(_constants.colors.bgColorOpaque, ";\n  color: ").concat(_constants.colors.textColorOpaque, ";\n  font-size: 1.1rem;\n  z-index: 1;\n  &:before {\n      content: '';\n      position: absolute;\n      top: -3px;\n      bottom: -3px;\n      left: -3px;\n      right: -3px;\n      border-radius: ").concat(_constants.dim.radius, "px;\n      border: 5px solid ").concat(_constants.colors.bgColorOpaque, ";\n  }\n");
+}, _constants.colors.textColorOpaque, function (p) {
+  return !p.active && 'background-color: ' + _constants.colors.bgColorHighlight;
 });
 
 //# sourceMappingURL=index.js.map
