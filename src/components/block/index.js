@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import PropTypes from 'prop-types'
-import { colors } from '../constants'
+import { colors, dim } from '../constants'
 
 const Block = styled.div`
 display: flex;
@@ -32,6 +32,7 @@ align-self: ${p => p.alignSelfCenter ? 'center' :
 ${p => p.withMargin && 'margin: 10px;'}
 ${p => p.withPadding && 'padding: 10px;'}
 ${p => p.withBorder && 'border: 1px solid ' + colors.bgColorTransparent1 + ';'}
+${p => p.withHeader && 'margin-top: ' + (dim.headerHeight + 15) + 'px;'}
 `
 
 Block.propTypes = {
@@ -58,9 +59,10 @@ Block.propTypes = {
     withMargin: PropTypes.any,
     withPadding: PropTypes.any,
     withBorder: PropTypes.any,
+    withHeader: PropTypes.any,
 }
 Block.defaultProps = {
-
+    withHeader: false
 }
 
 export default Block

@@ -5,6 +5,8 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = void 0;
 
+var _react = _interopRequireDefault(require("react"));
+
 var _styledComponents = _interopRequireDefault(require("styled-components"));
 
 var _constants = require("../constants");
@@ -26,7 +28,7 @@ function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(
 function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 
 function InputText(props) {
-  return /*#__PURE__*/React.createElement(StyledInput, _extends({
+  return /*#__PURE__*/_react.default.createElement(StyledInput, _extends({
     type: "text"
   }, props));
 }

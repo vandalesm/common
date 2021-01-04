@@ -65,7 +65,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "vandalesm.main/input-text@0.0.3": {
+    "vandalesm.main/input-text@0.0.4": {
         "files": [
             {
                 "relativePath": "src/components/input-text/index.js",
