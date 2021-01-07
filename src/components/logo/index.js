@@ -15,7 +15,7 @@ Logo.defaultProps = {
     image: logo,
     width: 30,
     height: 30,
-    leftIndent: 60,
+    leftIndent: 20,
     label: 'dots'
 }
 function Logo(props) {
@@ -31,11 +31,11 @@ function Logo(props) {
             <img src={props.image} style={{ width: props.width + 'px', height: props.height + 'px' }} alt='' />
             <span ref={el}
                 style={{
-                    paddingLeft: '20px',
+                    paddingLeft: '15px',
                     fontSize: '1.55rem',
                     fontFamily: 'monospace',
                     fontWeight: 'bold',
-                    color: colors.bgColorTransparent2,
+                    color: colors.bgColorTransparent3,
                 }}>{props.label}</span>
         </Block>
     )

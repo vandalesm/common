@@ -3,7 +3,8 @@ export const colors = {
     bgColorTransparent1: 'rgba(15, 15, 15, 0.9)',
     bgColorTransparent2: 'rgba(15, 15, 15, 0.85)',
     bgColorTransparent3: 'rgba(15, 15, 15, 0.75)',
-    bgColorTransparent4: 'rgba(15, 15, 15, 0.35)',
+    bgColorTransparent4: 'rgba(15, 15, 15, 0.30)',
+    bgColorTransparent5: 'rgba(15, 15, 15, 0.15)',
     bgColorHighlight: 'rgba(255, 255, 255, 0.05)',
     textColorOpaque: 'rgba(255, 255, 255, 1)',
     textColorTransparent1: 'rgba(255, 255, 255, 0.75)',
@@ -13,5 +14,5 @@ export const colors = {
 export const dim = {
     height: 35,
     radius: 3,
-    headerHeight: 45,
+    headerHeight: 35,
 }

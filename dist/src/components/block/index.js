@@ -14,7 +14,7 @@ var _constants = require("../constants");
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\ndisplay: flex;\nflex: 1 1 auto;\n", "\n", "\n", "\n", "\n", "\nflex-direction: ", ";\njustify-content: ", ";\nalign-items: ", ";\nalign-self: ", ";\n", "\n", "\n", "\n"]);
+  var data = _taggedTemplateLiteral(["\ndisplay: flex;\nflex: 1 1 auto;\n", "\n", "\n", "\n", "\n", "\nflex-direction: ", ";\njustify-content: ", ";\nalign-items: ", ";\nalign-self: ", ";\n", "\n", "\n", "\n", "\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -49,6 +49,8 @@ var Block = _styledComponents.default.div(_templateObject(), function (p) {
   return p.withPadding && 'padding: 10px;';
 }, function (p) {
   return p.withBorder && 'border: 1px solid ' + _constants.colors.bgColorTransparent1 + ';';
+}, function (p) {
+  return p.withHeader && 'margin-top: ' + (_constants.dim.headerHeight + 15) + 'px;';
 });
 
 Block.propTypes = {
@@ -74,9 +76,12 @@ Block.propTypes = {
   alignSelfBaseline: _propTypes.default.any,
   withMargin: _propTypes.default.any,
   withPadding: _propTypes.default.any,
-  withBorder: _propTypes.default.any
+  withBorder: _propTypes.default.any,
+  withHeader: _propTypes.default.any
 };
-Block.defaultProps = {};
+Block.defaultProps = {
+  withHeader: false
+};
 var _default = Block;
 exports.default = _default;
 

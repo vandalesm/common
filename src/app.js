@@ -13,7 +13,7 @@ function App() {
   return (
     <Block column withHeader>
       <Header>
-        <Logo image={logo192png} label='dots' />
+        <Logo image={logo192png} label='3dots' />
         <SearchBox onSearch={(k) => console.log(k)} />
       </Header>
       <Block column withMargin style={{ maxWidth: '500px' }}>
