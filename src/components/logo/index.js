@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react'
 import PropTypes from 'prop-types'
 import logo from './logo192.png'
 import Block from '../block'
-import { colors, font } from '../constants'
+import { colors, font } from '../../constants'
 
 Logo.propTypes = {
     image: PropTypes.any,

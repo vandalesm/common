@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import PropTypes from 'prop-types'
-import { colors, dim } from '../constants'
+import { colors, dim } from '../../constants'
 
 const Block = styled.div`
 display: flex;

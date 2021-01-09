@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { colors, dim, font } from '../constants'
+import { colors, dim, font } from '../../constants'
 
 const Button = styled.button`
 border: none;
