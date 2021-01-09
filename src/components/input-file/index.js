@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import styled from 'styled-components'
 import PropTypes from 'prop-types'
-import { colors, dim, font } from '../../constants'
+import { colors, dim, font } from '../constants'
 import Block from '../block'
 import { MdOpenInBrowser } from 'react-icons/md'
 

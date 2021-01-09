@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import Block from '../block'
-import { colors, dim, font } from '../../constants'
+import { colors, dim, font } from '../constants'
 
 ButtonGroup.propTypes = {
     data: PropTypes.arrayOf(PropTypes.shape({

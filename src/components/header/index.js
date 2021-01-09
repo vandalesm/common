@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react'
 import styled from 'styled-components'
 import Block from '../block'
-import { colors, dim } from '../../constants'
+import { colors, dim } from '../constants'
 
 function Header(props) {
     const [raised, setRaised] = useState(false)
