@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import Block from '../block'
-import { colors, dim } from '../constants'
+import { colors, dim, font } from '../constants'
 
 ButtonGroup.propTypes = {
     data: PropTypes.arrayOf(PropTypes.shape({
@@ -64,13 +64,13 @@ justify-content: center;
 align-items: center;
 width: 100%;
 height: ${dim.height}px;
-font-size: 1rem;
-font-family: monospace;
+font-size: ${font.controlSize};
+font-family: ${font.code};
 position: relative;
 ${p => p.active && `
   background-color: ${colors.bgColorOpaque};
   color: ${colors.textColorOpaque};
-  font-size: 1.1rem;
+  font-size: ${font.controlSizeRaised};
   z-index: 1;
   &:before {
       content: '';

@@ -16,3 +16,10 @@ export const dim = {
     radius: 3,
     headerHeight: 35,
 }
+
+export const font = {
+    controlSize: '0.82rem',
+    controlSizeRaised: '0.92rem',
+    controlSizeLowered: '0.8rem',
+    code: 'source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace',
+}

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import styled from 'styled-components'
 import PropTypes from 'prop-types'
-import { colors, dim } from '../constants'
+import { colors, dim, font } from '../constants'
 import Block from '../block'
 import { MdOpenInBrowser } from 'react-icons/md'
 
@@ -83,6 +83,6 @@ overflow: hidden;
 display: inline-block;
 text-overflow: ellipsis;
 white-space: nowrap;
-font-size: 1rem;
-font-family: monospace;
+font-size: ${font.controlSize};
+font-family: ${font.code};
 `

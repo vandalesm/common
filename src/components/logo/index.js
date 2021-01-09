@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react'
 import PropTypes from 'prop-types'
 import logo from './logo192.png'
 import Block from '../block'
-import { colors } from '../constants'
+import { colors, font } from '../constants'
 
 Logo.propTypes = {
     image: PropTypes.any,
@@ -33,8 +33,7 @@ function Logo(props) {
                 style={{
                     paddingLeft: '15px',
                     fontSize: '1.55rem',
-                    fontFamily: 'monospace',
-                    fontWeight: 'bold',
+                    fontFamily: font.code,
                     color: colors.bgColorTransparent3,
                 }}>{props.label}</span>
         </Block>

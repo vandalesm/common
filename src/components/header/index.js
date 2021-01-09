@@ -10,11 +10,6 @@ function Header(props) {
         raisedRef.current = value
         setRaised(value)
     }
-    useEffect(() => {
-        window.addEventListener('scroll', handleScroll)
-        return () => window.removeEventListener('scroll', handleScroll)
-    }, [])
-
     const handleScroll = (e) => {
         let scrollTop = e.srcElement.body.scrollTop
         const isCSS1Compat = ((document.compatMode || '') === 'CSS1Compat')
@@ -29,6 +24,11 @@ function Header(props) {
             }
         }
     }
+    useEffect(() => {
+        window.addEventListener('scroll', handleScroll)
+        return () => window.removeEventListener('scroll', handleScroll)
+    })
+
     return (
         <Container justifyBetween alignItemsCenter isRaised={raised}>
             {props.children}

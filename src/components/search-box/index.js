@@ -48,7 +48,6 @@ background-color: transparent;
 border: none;
 width: ${p => p.width - 30}px;
 max-width: ${p => p.width - 30}px;
-font-size: 0.9rem;
 padding: 5px 0;
 &:focus {
     outline: none;
